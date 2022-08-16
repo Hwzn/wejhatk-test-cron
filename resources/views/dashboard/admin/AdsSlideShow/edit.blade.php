@@ -1,0 +1,47 @@
+<div class="modal fade" id="editModolad_AdsSlideShow" tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 style="font-family: 'Cairo', sans-serif;" class="modal-title"
+                            id="exampleModalLabel">
+                            {{ trans('AdsSlideShow_trans.add_Ads') }}
+                        </h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                         <div class="alert alert-danger print-error-msg" style="display:none">
+                                    <ul></ul>
+                         </div>
+                        <!-- add_form -->
+                        <form action="{{route('update_ads')}}" id="imageUpload" method="POST">
+                            @csrf
+                          
+                            <div class="form-group">
+                                <label
+                                    for="exampleFormControlTextarea1">{{ trans('AdsSlideShow_trans.ads_photo') }}
+                                    :</label>
+                                    <input type="file" name="ads_photo" id="file" accept="image/*" onchange="loadFile1(event)" class="form-control">
+                                 <input type="hidden" name="Ads_id" />
+                                 <input type="hidden" name="oldimagepath" />
+
+                                 <hr>
+                                 <img style="width:400px;height:200px" name="ads_photo" id="FileUpload2" />
+                                 <hr>
+                                 <input type="checkbox" name="status" checked value=1 />
+                            </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary"
+                                data-dismiss="modal">{{  trans('helps_trans.Close') }}</button>
+                        <button  type="edit"
+                                class="btn btn-success">{{ trans('helps_trans.submit') }}</button>
+                    </div>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+   

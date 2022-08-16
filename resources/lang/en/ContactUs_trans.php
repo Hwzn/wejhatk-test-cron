@@ -1,0 +1,11 @@
+<?php
+return[
+    'Contact_us'=>'Contact_us',
+    'Message_list'=>'Message_list',
+    'name'=>'name',
+    'phone'=>'phone_number',
+    'message'=>'message_text',
+    'Proccess'=>'Proccess',
+    'show_message'=>'show_message',
+    'date_message'=>'date_message',
+];
